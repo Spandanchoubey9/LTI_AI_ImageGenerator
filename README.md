@@ -66,15 +66,15 @@ cd LTI_AI_ImageGenerator
 
 ### 2) Start Backend server
 
-cd backend
-npm install
-npm start
+- cd backend
+- npm install
+- npm start
 
 ### 3) Start Frontend server
 
-cd frontend
-npm install
-npm start
+- cd frontend
+- npm install
+- npm start
 
 
 
