@@ -61,8 +61,8 @@ The application allows users to enter a text prompt and generate AI images in re
 
 ### 1️) Clone the Repository
 
-git clone https://github.com/Spandanchoubey9/LTI_AI_ImageGenerator.git
-cd LTI_AI_ImageGenerator
+- git clone https://github.com/Spandanchoubey9/LTI_AI_ImageGenerator.git
+- cd LTI_AI_ImageGenerator
 
 ### 2) Start Backend server
 
