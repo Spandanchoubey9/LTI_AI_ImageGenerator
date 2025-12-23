@@ -14,6 +14,28 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  const downloadImage = async () => {
+  try {
+    const response = await fetch(imageUrl);
+    const blob = await response.blob();
+
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = `AI_Image_${Date.now()}.png`;
+
+    document.body.appendChild(link);
+    link.click();
+
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+  } catch (err) {
+    console.error("Download failed", err);
+    alert("Failed to download image");
+  }
+};
+
   const generateImage = async () => {
     if (!prompt.trim()) {
       setError("Please enter a prompt");
@@ -85,6 +107,8 @@ return (
           {imageUrl && (
             <div className="image-container">
               <img src={imageUrl} alt="Generated result" />
+
+              <button className="download-button" onClick={downloadImage}>Download Image</button>
             </div>
           )}
         </div>
