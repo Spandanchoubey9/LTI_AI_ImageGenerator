@@ -61,7 +61,6 @@ The application allows users to enter a text prompt and generate AI images in re
 
 ### 1️) Clone the Repository
 
-```bash
 git clone https://github.com/Spandanchoubey9/LTI_AI_ImageGenerator.git
 cd LTI_AI_ImageGenerator
 
